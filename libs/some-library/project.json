@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/some-library/src",
+  "prefix": "nx-eslint-workspace-rule-destroy-service",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/some-library"],
+      "options": {
+        "jestConfig": "libs/some-library/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/some-library/**/*.ts",
+          "libs/some-library/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
